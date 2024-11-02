@@ -7,6 +7,11 @@
       "output": "static",
       "bundler": "metro"
     },
+    "splash": {
+      "image": "./public/assets/images/splashlogo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4BA26A"
+    },
     "plugins": [
       [
         "expo-router",
@@ -16,6 +21,14 @@
       ]
     ],
     "name": "agrotech",
-    "slug": "agrotech"
+    "slug": "agrotech",
+    "extra": {
+      "eas": {
+        "projectId": "d3a4c4d5-8041-4b9d-82ed-168b4c02ac74"
+      }
+    },
+    "android": {
+      "package": "com.ganeshkasture.agrotech"
+    }
   }
 }

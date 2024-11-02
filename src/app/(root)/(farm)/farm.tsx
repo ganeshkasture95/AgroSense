@@ -1,7 +1,6 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useState } from 'react';
 import { ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function FarmPage() {
   const [crops, setCrops] = useState([]); // Stores all crops
@@ -19,7 +18,7 @@ export default function FarmPage() {
 
   return (
 
-    <SafeAreaView className='flex-1'>
+
     <ScrollView className="flex-1 p-4 bg-[#F0F8F5]">
       <Text className="text-3xl font-bold text-green-800 mb-6">Farm Details</Text>
 
@@ -80,6 +79,6 @@ export default function FarmPage() {
         }
       </View>
     </ScrollView>
-    </SafeAreaView>
+   
   );
 }

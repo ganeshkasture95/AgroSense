@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Page() {
   return (
     <SafeAreaView className="flex items-center ">
+      
         <Redirect  href={"/(root)/home"} />
     </SafeAreaView>
   );

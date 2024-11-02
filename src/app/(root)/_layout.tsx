@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons'; // You can use other icon sets if
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import Farm from './farm';
+import FarmLayout from './(farm)/_layout';
 import Home from './home';
 import Profile from './profile';
 
@@ -21,6 +21,8 @@ const RootLayout = () => {
                         iconName = focused ? 'leaf' : 'leaf-outline';
                     } else if (route.name === 'profile') {
                         iconName = focused ? 'person' : 'person-outline';
+                    } else if (route.name === '(farm)') {
+                        iconName = focused ? 'leaf' : 'leaf-outline';
                     }
 
                     // You can return any component that you like here
@@ -50,8 +52,9 @@ const RootLayout = () => {
             })}
         >
             <Tabs.Screen name="home" component={Home} options={{ title: 'Home', headerShown:false }} />
-            <Tabs.Screen name="farm" component={Farm} options={{ title: 'Farm' }} />
-            <Tabs.Screen name="profile" component={Profile} options={{ title: 'Profile' }} />
+            {/* <Tabs.Screen name="farm" component={Farm} options={{ title: 'Farm', headerShown:false }} /> */}
+            <Tabs.Screen name="(farm)" component={FarmLayout} options={{ title: 'Farm', headerShown:false }} />
+            <Tabs.Screen name="profile" component={Profile} options={{ title: 'Profile', headerShown:false }} />
         </Tabs.Navigator>
     );
 };
