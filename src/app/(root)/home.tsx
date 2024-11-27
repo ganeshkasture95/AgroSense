@@ -28,14 +28,14 @@ const HomeCardData = [
     image: require("p/public/assets/images/farm.png"),
     color: "#BEE3CB",
     action: "Live Forecast",
-    path:"/(root)/(farm)/farm"
+    path:"/(root)/(farm)/Farm"
   },
   {
     name: "Water Management",
     image: require("p/public/assets/images/pump.png"),
     color: "#BEE3CB",
     action: "Irrigation Control",
-    path:"/(root)/(farm)/Irigation"
+    path:"/(root)/(farm)/Irrigation"
   },
 ]
 

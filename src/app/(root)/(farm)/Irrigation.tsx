@@ -2,9 +2,7 @@ import { Feather } from '@expo/vector-icons';
 import React, { useEffect, useState } from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
-
-export default function IrrigationPage() {
-
+const Irrigation = () => {
     const [isIrrigationOn, setIrrigationOn] = useState(false);
     const [waterSprayed, setWaterSprayed] = useState(0); // Amount of water sprayed in liters
 
@@ -55,7 +53,17 @@ export default function IrrigationPage() {
                         {isIrrigationOn ? "Stop" : "Start"}
                     </Text>
                 </TouchableOpacity>
+
+
+            </View>
+
+            <View>
+                <View className='flex rounded-full w-52'>
+
+                </View>
             </View>
         </ScrollView>
     );
 }
+
+export default Irrigation

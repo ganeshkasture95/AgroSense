@@ -64,7 +64,7 @@ export default function FarmPage() {
       </View>
 
       {/* Dynamic Crop List Section */}
-      <View className="bg-white p-4 rounded-xl shadow-lg mb-4">
+      <View className="bg-white p-4 rounded-xl shadow-lg mb-4 pb-40">
         <Text className="text-xl font-semibold text-green-800 mb-2">Crops Added</Text>
         {
           crops.length === 0 ? (

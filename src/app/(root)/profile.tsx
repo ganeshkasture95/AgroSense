@@ -1,8 +1,28 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function ProfilePage() {
+
+
+   const router = useRouter();
+  const handleLogout = async () => {
+    console.log("Logout button pressed"); // Check if this logs
+
+    try {
+      await AsyncStorage.removeItem("auth");
+      console.log("Token removed from storage");
+
+      // Replace the path with your login route
+      router.replace("/(auth)/login");
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
+  };
+
+
   const [username, setUsername] = useState("John Doe");
   const [email, setEmail] = useState("john.doe@example.com");
   const [location, setLocation] = useState("Satara, India");
@@ -89,8 +109,13 @@ export default function ProfilePage() {
           <Ionicons name="lock-closed" size={24} color="gray" />
         </TouchableOpacity>
         
-        <TouchableOpacity className="flex-row justify-between items-center p-3 bg-[#BEE3CB] rounded-lg">
+        <TouchableOpacity className="flex-row justify-between items-center mb-3 p-3 bg-[#BEE3CB] rounded-lg">
           <Text className="text-lg font-semibold text-gray-700">Help & Support</Text>
+          <Ionicons name="help-circle" size={24} color="gray" />
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={handleLogout} className="flex-row justify-between  items-center p-3 mb-40 bg-[#BEE3CB] rounded-lg">
+          <Text className="text-lg font-semibold text-gray-700">LogOut</Text>
           <Ionicons name="help-circle" size={24} color="gray" />
         </TouchableOpacity>
       </View>

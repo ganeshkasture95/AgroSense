@@ -4,7 +4,7 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import FarmPage from '../farm';
 import CropDiagnose from './CropDiagnose';
-import IrrigationPage from './Irigation';
+import Irrigation from './Irrigation';
 import SoilMonitoring from './SoilMonitoring';
 
 const Tabs = createMaterialTopTabNavigator();
@@ -75,8 +75,8 @@ const FarmLayout = () => {
                     }}
                 />
                 <Tabs.Screen
-                    name="IrrigationSystem"
-                    component={IrrigationPage}
+                    name="Irrigation"
+                    component={Irrigation}
                     options={{
                         title: 'Irrigation',
                         tabBarIcon: ({ color }) => <Ionicons name="rainy" size={20} color={color} />,

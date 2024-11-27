@@ -6,7 +6,9 @@ export default function Page() {
   return (
     <SafeAreaView className="flex items-center ">
       
-        <Redirect  href={"/(root)/home"} />
+        <Redirect  href={"/(auth)/login"} />
+        {/* <Redirect  href={"/(auth)/landing"} /> */}
+        {/* <Redirect  href={"/(root)/home"} /> */}
     </SafeAreaView>
   );
 }
